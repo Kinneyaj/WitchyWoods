@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCamera;
 
     private void Start() {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         mainCamera = Camera.main;
     }
 
@@ -46,4 +46,6 @@ public class PlayerMovement : MonoBehaviour
         movement *= movementSpeed * Time.deltaTime;
         transform.Translate(movement, Space.World);
     }
+
+
 }
